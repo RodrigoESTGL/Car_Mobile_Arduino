@@ -83,6 +83,7 @@ void loop() {
       break;
 
     default:
+    stop_engines();
       break;
   }
 }
@@ -122,9 +123,8 @@ void stop_engines() {
 
 void sensor_Go(){
 bool loop_on = true; 
-float dist;
 while (loop_on){
-  dist = hc.dist(); 
+  float dist = hc.dist(); 
     if (dist <= 30.0) { 
       stop_engines();
       Serial.println(dist);
@@ -153,8 +153,7 @@ while (loop_on){
 void sensor_right(){
 bool loop_on = true; 
 while (loop_on){
-  float dist;
-  dist = hc.dist(); 
+  float dist = hc.dist(); 
     if (dist <= 30.0) { 
       stop_engines();
       Serial.println("You can't go to right");
@@ -182,8 +181,7 @@ while (loop_on){
 void sensor_left(){
 bool loop_on = true; 
 while (loop_on){
-  float dist;
-  dist = hc.dist(); 
+  float dist = hc.dist(); 
     if (dist <= 30.0) { 
       stop_engines();
       Serial.println("You can't go to left.");
