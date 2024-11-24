@@ -6,7 +6,6 @@ SoftwareSerial serialdoBluetooth(2, 3);
 
 #define Ex 9
 #define Tx 11
-#define distmax 200
 
 #define engineFD 6
 #define engineTD 5
